@@ -9,13 +9,13 @@ config.keys = {
 
 	{ key = "c", mods = "LEADER", action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }) },
 
-	{ key = "h", mods = "LEADER", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+	{ key = "V", mods = "LEADER", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
 	{ key = "v", mods = "LEADER", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 
-	{ key = "H", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
-	{ key = "J", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
-	{ key = "K", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
-	{ key = "L", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+	{ key = "h", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+	{ key = "j", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+	{ key = "k", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+	{ key = "l", mods = "LEADER", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
 	{ key = "0", mods = "LEADER", action = wezterm.action({ ActivateTab = 0 }) },
 	{ key = "1", mods = "LEADER", action = wezterm.action({ ActivateTab = 1 }) },
@@ -31,6 +31,7 @@ config.keys = {
 	{ key = "f", mods = "LEADER", action = wezterm.action.ToggleFullScreen },
 }
 
+config.font = wezterm.font("Iosevka Term", { stretch = "Expanded" })
 config.window_decorations = "RESIZE"
 config.tab_and_split_indices_are_zero_based = true
 config.color_scheme = "One Dark (Gogh)"
