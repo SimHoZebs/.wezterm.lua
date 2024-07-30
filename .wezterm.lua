@@ -2,6 +2,13 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+local mux = wezterm.mux
+
+wezterm.on('gui-startup', function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():maximize()
+end)
+
 config.default_prog = { "pwsh.exe" }
 
 config.leader = { key = "a", mods = "CTRL" }
@@ -31,10 +38,11 @@ config.keys = {
 	{ key = "f", mods = "LEADER", action = wezterm.action.ToggleFullScreen },
 }
 
+config.font_size = 11
 config.font = wezterm.font("Iosevka Term", { stretch = "Expanded" })
 config.window_decorations = "RESIZE"
 config.tab_and_split_indices_are_zero_based = true
-config.color_scheme = "One Dark (Gogh)"
+config.color_scheme = "Afterglow"
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.initial_rows = 32
 config.initial_cols = 150
